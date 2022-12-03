@@ -11,7 +11,7 @@ export class VideogameListComponent {
     {
       title: "Luigi's Mansion",
       description:"In this videogame Luigi is the main character instead of Mario, after Mario Is Missing! Players control him as he explores a haunted mansion, searches for Mario and deals with ghosts by capturing them through a vacuum cleaner supplied by Professor E. Gadd.",
-      avaliation: 7,
+      rate: 7,
       alreadyFinished: true
     },
     {
@@ -22,7 +22,7 @@ export class VideogameListComponent {
     {
       title: "Undertale",
       description:"Welcome to UNDERTALE. In this RPG, you control a human who falls underground into the world of monsters. Now you must find your way out... or stay trapped forever. In this RPG, you don't have to kill anyone. Each enemy can be 'defeated' nonviolently. Dance with a slime. Pet a dog. Whisper your favorite secret to a knight. Or, ignore this choice and rain destruction upon your foes.",
-      avaliation: 9,
+      rate: 9,
       alreadyFinished: true
     },
   ];
