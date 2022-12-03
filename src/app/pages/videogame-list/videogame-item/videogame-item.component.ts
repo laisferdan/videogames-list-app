@@ -14,7 +14,7 @@ export class VideogameItemComponent {
   constructor(){}
 
   getColor(): string {
-    return this.videogame?.currentPlaying? "#38b043" : "";
+    return this.videogame?.currentPlaying? "#4aba91" : "";
   }
 
   changeCurrentPlaying(): void {

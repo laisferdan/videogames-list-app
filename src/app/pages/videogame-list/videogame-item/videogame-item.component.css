@@ -1,3 +1,7 @@
 .completed {
     text-decoration: line-through;
 }
+
+mat-expansion-panel {
+    background-color: #494b4b;
+}
