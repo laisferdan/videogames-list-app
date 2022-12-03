@@ -9,22 +9,21 @@ import Videogame from 'src/app/models/Videogame';
 export class VideogameListComponent {
   videogameList: Videogame[] = [
     {
-      title: "The Legend of Zelda: Majora's Mask",
-      description:"The story of Majora's Mask takes place two months after the events of Ocarina of Time. It follows Link, who on a personal quest ends up in Termina, a world parallel to Hyrule. Upon reaching Termina, Link learns that the world is endangered as the moon will fall into the world in three days.",
-      avaliation: 10,
-      currentPlaying: false
-    },
-    {
-      title: "Genshin Impact",
-      description:"Genshin Impact is an open-world action role-playing game that allows the player to control one of four interchangeable characters in a party. Switching between characters can be done quickly during combat, allowing the player to use several different combinations of skills and attacks.",
-      avaliation: 8,
-      currentPlaying: true
-    },
-    {
-      title: "Ragnarok",
-      description:"Ragnarok Online is a massively multiplayer online role-playing game (MMORPG) created by Gravity based on the manhwa Ragnarok by Lee Myung-jin. The story of Ragnarok takes us to a place called Midgard where God, Humans, and Demons have ended a gruesome war and achieved 1000 years of fragile and forged peace.",
+      title: "Luigi's Mansion",
+      description:"In this videogame Luigi is the main character instead of Mario, after Mario Is Missing! Players control him as he explores a haunted mansion, searches for Mario and deals with ghosts by capturing them through a vacuum cleaner supplied by Professor E. Gadd.",
       avaliation: 7,
-      currentPlaying: false
+      alreadyFinished: true
+    },
+    {
+      title: "The Legend of Zelda: Tears of the Kingdom",
+      description:"The Legend of Zelda: Tears of the Kingdom is an upcoming action-adventure game developed and published by Nintendo. It is the sequel to The Legend of Zelda: Breath of the Wild (2017) and is scheduled for release on the Nintendo Switch on May 12, 2023.",
+      alreadyFinished: false
+    },
+    {
+      title: "Undertale",
+      description:"Welcome to UNDERTALE. In this RPG, you control a human who falls underground into the world of monsters. Now you must find your way out... or stay trapped forever. In this RPG, you don't have to kill anyone. Each enemy can be 'defeated' nonviolently. Dance with a slime. Pet a dog. Whisper your favorite secret to a knight. Or, ignore this choice and rain destruction upon your foes.",
+      avaliation: 9,
+      alreadyFinished: true
     },
   ];
  }

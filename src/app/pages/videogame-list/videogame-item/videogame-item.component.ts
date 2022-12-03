@@ -14,11 +14,11 @@ export class VideogameItemComponent {
   constructor(){}
 
   getColor(): string {
-    return this.videogame?.currentPlaying? "#4aba91" : "";
+    return this.videogame?.alreadyFinished? "#4aba91" : "";
   }
 
-  changeCurrentPlaying(): void {
+  changeAlreadyFinished(): void {
     if (this.videogame)
-      this.videogame.currentPlaying = !this.videogame?.currentPlaying;
+      this.videogame.alreadyFinished = !this.videogame?.alreadyFinished;
   }
 }
