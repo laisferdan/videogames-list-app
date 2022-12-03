@@ -21,7 +21,7 @@ export class VideogameListComponent {
     },
     {
       title: "Undertale",
-      description:"Welcome to UNDERTALE. In this RPG, you control a human who falls underground into the world of monsters. Now you must find your way out... or stay trapped forever. In this RPG, you don't have to kill anyone. Each enemy can be 'defeated' nonviolently. Dance with a slime. Pet a dog. Whisper your favorite secret to a knight. Or, ignore this choice and rain destruction upon your foes.",
+      description:"In this RPG, you control a human who falls underground into the world of monsters. Now you must find your way out... or stay trapped forever. You don't have to kill anyone. Each enemy can be 'defeated' nonviolently. Dance with a slime. Pet a dog. Whisper your favorite secret to a knight. Or, ignore this choice and rain destruction upon your foes.",
       rate: 9,
       alreadyFinished: true
     },
