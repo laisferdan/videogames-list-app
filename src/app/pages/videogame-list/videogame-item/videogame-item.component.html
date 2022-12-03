@@ -1,12 +1,13 @@
-<mat-expansion-panel hideToggle>
+<mat-expansion-panel hideToggle *ngIf="videogame" [ngStyle]="{ backgroundColor: getColor() }">
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        {{this.videogame.title}}
+      <mat-panel-title [ngClass]="{ 'completed' : videogame.currentPlaying }">
+        <mat-checkbox [checked]="videogame.currentPlaying" (change)="changeCurrentPlaying()"></mat-checkbox>
+        {{videogame.title}}
       </mat-panel-title>
     </mat-expansion-panel-header>
     <ul>
-        <li><strong>Description: </strong> {{this.videogame.description}} </li>
-        <li><strong>Avaliation: </strong> {{this.videogame.avaliation}} </li>
-        <li><strong>Already finished: </strong> {{this.videogame.alreadyFinished}} </li>
+        <li *ngIf="videogame?.description"><strong>Description: </strong> {{videogame.description}} </li>
+        <li><strong>Avaliation: </strong> {{videogame.avaliation}} </li>
+        <li><strong>Current playing: </strong> {{videogame.currentPlaying}} </li>
     </ul>
   </mat-expansion-panel>

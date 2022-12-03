@@ -1,6 +1,6 @@
-export default interface VideogameItemComponent {
+export default interface Videogame {
     title: string;
-    description: string;
+    description?: string;
     avaliation: number;
-    alreadyFinished: boolean;
+    currentPlaying: boolean;
   }
