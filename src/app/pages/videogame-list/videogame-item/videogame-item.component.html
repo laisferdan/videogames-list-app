@@ -1,4 +1,4 @@
-<mat-expansion-panel hideToggle *ngIf="videogame" [ngStyle]="{ backgroundColor: getColor() }">
+<mat-expansion-panel hideToggle *ngIf="videogame" [videogameDirective]="videogame.alreadyFinished">
     <mat-expansion-panel-header>
       <mat-panel-title [ngClass]="{ 'completed' : videogame.alreadyFinished }">
         <mat-checkbox [checked]="videogame.alreadyFinished" (change)="changeAlreadyFinished()"></mat-checkbox>
@@ -6,8 +6,9 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <ul>
-        <li *ngIf="videogame?.description"><strong>Description: </strong> {{videogame.description}} </li>
-        <li *ngIf="videogame?.rate"><strong>Rate: </strong> {{videogame.rate}} </li>
-        <li><strong>Already finished: </strong> {{videogame.alreadyFinished}} </li>
+        <li *ngIf="videogame.summary"><strong>Summary: </strong> {{videogame.summary}} </li>
+        <li *ngIf="videogame.score"><strong>Score: </strong> {{videogame.score}} </li>
+        <li><strong>Release date: </strong> {{ videogame.releaseDate | date: "dd/MM/yyyy" }} </li>
+        <li><strong>Already finished: </strong> {{ videogame.alreadyFinished | alreadyfinished }} </li>
     </ul>
   </mat-expansion-panel>
