@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { VideogameListComponent } from './videogame-list/videogame-list.component';
 import { VideogameItemComponent } from './videogame-list/videogame-item/videogame-item.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   exports: [
     VideogameListComponent,
