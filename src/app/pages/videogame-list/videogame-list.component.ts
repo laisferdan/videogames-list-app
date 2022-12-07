@@ -17,7 +17,7 @@ export class VideogameListComponent {
     },
     {
       title: "The Legend of Zelda: Tears of the Kingdom",
-      summary:"The Legend of Zelda: Tears of the Kingdom is an upcoming action-adventure game developed and published by Nintendo. It is the sequel to The Legend of Zelda: Breath of the Wild (2017) and is scheduled for release on the Nintendo Switch on May 12, 2023.",
+      summary:"The Legend of Zelda: Tears of the Kingdom is an upcoming action-adventure game developed and published by Nintendo. It is the sequel to The Legend of Zelda: Breath of the Wild (2017) and is scheduled for release on the Nintendo Switch.",
       releaseDate: new Date(2023, 4, 12),
       alreadyFinished: false
     },
