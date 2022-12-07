@@ -1,6 +1,7 @@
 export default interface Videogame {
     title: string;
-    description?: string;
-    rate?: number;
+    summary?: string;
+    score?: number;
+    releaseDate: Date;
     alreadyFinished: boolean;
   }
