@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { VideogameService } from 'src/app/services/videogame.service';
 import Videogame from 'src/app/models/Videogame';
 
 @Component({
@@ -11,12 +12,15 @@ import Videogame from 'src/app/models/Videogame';
 export class VideogameItemComponent {
   @Input() videogame?: Videogame;
 
-  constructor(){}
+  constructor(private videogameService: VideogameService){}
 
   getColor(): string {
     return this.videogame?.alreadyFinished? "#4aba91" : "";
   }
 
+  deleteItem() {
+    if (this.videogame) this.videogameService.deleteVideogame(this.videogame.id);
+  }
   changeAlreadyFinished(): void {
     if (this.videogame)
       this.videogame.alreadyFinished = !this.videogame?.alreadyFinished;
