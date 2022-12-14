@@ -15,10 +15,10 @@ export class VideogameListComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.videogameList = this.videogameService.getVideogames();
-    console.log("Task List was born!");
+    console.log("Videogame List was born!");
   }
 
   ngOnChanges():void {
-    console.log("Task List has changed!");
+    console.log("Videogame List has changed!");
   }
  }
