@@ -53,8 +53,9 @@ export class VideogameService {
     this.videogameList.push(newVideogame);
   }
 
-  updateVideogame() {
-
+  updateVideogame(id: number, updatedVideogame: Videogame) {
+    const index = this.videogameList.findIndex((videogame)=> videogame.id == id);
+    this.videogameList[index] = updatedVideogame;
   }
 
   deleteVideogame(id: number) {
