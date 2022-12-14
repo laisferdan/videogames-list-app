@@ -1,27 +1,2 @@
-<form class="videogame-form" *ngIf="videogameForm" [formGroup]="videogameForm" (ngSubmit)="onSubmitForm()">  
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Title</mat-label>
-      <input matInput formControlName="title">
-    </mat-form-field>
-  
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Summary</mat-label>
-      <input matInput formControlName="summary">
-    </mat-form-field>
-
-    <mat-form-field class="full-width" appearance="fill">
-        <mat-label>Score</mat-label>
-        <input matInput formControlName="score">
-      </mat-form-field>
-  
-    <mat-form-field class="full-width" appearance="fill">
-      <mat-label>Release date</mat-label>
-      <input matInput formControlName="releaseDate">
-    </mat-form-field>
-  
-    <div>
-      <mat-checkbox formControlName="alreadyFinished">Already finished</mat-checkbox>
-    </div>
-  
-    <button class="submit-btn" mat-stroked-button color="primary" type="submit">Create new videogame item</button>
-  </form>
+<h1>Create New Videogame Item</h1>
+<app-videogame-form></app-videogame-form>
