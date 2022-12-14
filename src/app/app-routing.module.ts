@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { VideogameListComponent } from './pages/videogame-list/videogame-list.component';
 import { VideogameCreateComponent } from './pages/videogame-create/videogame-create.component';
+import { VideogameListComponent } from './pages/videogame-list/videogame-list.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
