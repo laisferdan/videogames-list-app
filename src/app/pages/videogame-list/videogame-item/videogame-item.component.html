@@ -1,7 +1,11 @@
 <mat-expansion-panel hideToggle *ngIf="videogame" [videogameDirective]="videogame.alreadyFinished">
     <mat-expansion-panel-header>
       <mat-panel-title [ngClass]="{ completed: videogame.alreadyFinished }">
-        <mat-checkbox [checked]="videogame.alreadyFinished" (change)="changeAlreadyFinished()" (click)="$event.stopPropagation()"></mat-checkbox>
+        <mat-checkbox 
+        [checked]="videogame.alreadyFinished" 
+        (change)="changeAlreadyFinished()" 
+        (click)="$event.stopPropagation()"
+        ></mat-checkbox>
         {{videogame.title}}
       </mat-panel-title>
     </mat-expansion-panel-header>
@@ -11,6 +15,12 @@
         <li><strong>Release date: </strong> {{ videogame.releaseDate | date: "dd/MM/yyyy" }} </li>
         <li><strong>Already finished: </strong> {{ videogame.alreadyFinished | alreadyfinished }} </li>
     </ul>
-    <button mat-raised-button color="primary">Update</button>
+    <button mat-raised-button color="primary" (click)="openDialog()">Update</button>
     <button mat-raised-button color="warn" (click)="deleteItem()">Delete</button>
+   
+    <ng-template #dialogTemplate>
+      <app-dialog>
+        <app-videogame-form requestType="update" [newVideogame]="videogame" ></app-videogame-form>
+      </app-dialog>
+    </ng-template>
   </mat-expansion-panel>
