@@ -1,3 +1,4 @@
+import { VideogameCreateComponent } from './videogame-create/videogame-create.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -5,17 +6,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './../material/material.module';
 import { SharedModule } from '../shared/shared.module';
 
-import { VideogameListComponent } from './videogame-list/videogame-list.component';
 import { VideogameItemComponent } from './videogame-list/videogame-item/videogame-item.component';
-import { VideogameCreateComponent } from './videogame-create/videogame-create.component';
+import { VideogameListComponent } from './videogame-list/videogame-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     VideogameListComponent,
     VideogameItemComponent,
-    VideogameCreateComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    VideogameCreateComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +27,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   exports: [
     VideogameListComponent,
     VideogameItemComponent
-  ]
+  ],
 })
 export class PagesModule { }
