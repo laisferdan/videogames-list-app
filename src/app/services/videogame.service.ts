@@ -6,8 +6,8 @@ import Videogame from '../models/Videogame';
   providedIn: 'root'
 })
 export class VideogameService {
-
-  videogameList: Videogame[] = [
+  videogameList: Videogame[];
+  videogameListLocal: Videogame[] = [
     {
       id: 1,
       title: "Luigi's Mansion",
@@ -41,8 +41,12 @@ export class VideogameService {
     },
   ];
 
-  constructor() {
-    console.log(Videogame.lastId);
+  constructor() { 
+    if (!localStorage.getItem("videogameList")) {
+      localStorage.setItem('videogameList',
+      JSON.stringify(this.videogameListLocal));
+    }
+    this.videogameList = JSON.parse(localStorage.getItem("videogameList")!);
   }
 
   getVideogames(): Videogame[] {
@@ -51,15 +55,21 @@ export class VideogameService {
 
   postVideogame(newVideogame: Videogame): void {
     this.videogameList.push(newVideogame);
+
+    localStorage.setItem("videogameList", JSON.stringify(this.videogameList));
   }
 
   updateVideogame(id: number, updatedVideogame: Videogame) {
     const index = this.videogameList.findIndex((videogame)=> videogame.id == id);
     this.videogameList[index] = updatedVideogame;
+
+    localStorage.setItem("videogameList", JSON.stringify(this.videogameList));
   }
 
   deleteVideogame(id: number) {
     const index = this.videogameList.findIndex((videogame)=> videogame.id == id);
     this.videogameList.splice(index, 1);
+
+    localStorage.setItem("videogameList", JSON.stringify(this.videogameList));
   }
 }
