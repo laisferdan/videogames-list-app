@@ -5,3 +5,15 @@
 mat-expansion-panel {
     background-color: #494b4b;
 }
+
+.mat-update {
+    background-color:#0e5135;
+    color: #fff;
+}
+
+.btn-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 25px;
+}

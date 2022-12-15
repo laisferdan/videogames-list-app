@@ -15,9 +15,10 @@
         <li><strong>Release date: </strong> {{ videogame.releaseDate | date: "dd/MM/yyyy" }} </li>
         <li><strong>Already finished: </strong> {{ videogame.alreadyFinished | alreadyfinished }} </li>
     </ul>
-    <button mat-raised-button color="primary" (click)="openDialog()">Update</button>
-    <button mat-raised-button color="warn" (click)="deleteItem()">Delete</button>
-   
+    <div class="btn-div">
+      <button mat-raised-button color="update" (click)="openDialog()">Update</button>
+      <button mat-raised-button color="warn" (click)="deleteItem()">Delete</button>
+    </div>
     <ng-template #dialogTemplate>
       <app-dialog>
         <app-videogame-form requestType="update" [newVideogame]="videogame" ></app-videogame-form>
